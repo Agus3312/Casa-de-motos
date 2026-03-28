@@ -47,18 +47,29 @@
     const hamburger = document.getElementById('hamburger');
     const mainNav = document.querySelector('.main-nav');
 
+    function closeMenu() {
+        hamburger.classList.remove('active');
+        mainNav.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
     if (hamburger) {
         hamburger.addEventListener('click', () => {
+            const isOpen = mainNav.classList.toggle('open');
             hamburger.classList.toggle('active');
-            mainNav.classList.toggle('open');
+            document.body.style.overflow = isOpen ? 'hidden' : '';
         });
 
         // Close menu when clicking a link
         mainNav.querySelectorAll('.nav-link').forEach((link) => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                mainNav.classList.remove('open');
-            });
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (mainNav.classList.contains('open') && !mainNav.contains(e.target) && !hamburger.contains(e.target)) {
+                closeMenu();
+            }
         });
     }
 

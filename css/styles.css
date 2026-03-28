@@ -1,6 +1,5 @@
 /* ==========================================================================
-   LB CORTAMOTOS - DESIGN TOKENS (CSS VARIABLES)
-   Listo para que Claude expanda la hoja de estilos
+   LV MOTOS - DESIGN TOKENS (CSS VARIABLES)
    ========================================================================== */
 
    :root {
@@ -251,7 +250,7 @@ ul {
 }
 
 .hamburger.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(5px, 7px);
 }
 
 .hamburger.active .hamburger-line:nth-child(2) {
@@ -259,7 +258,7 @@ ul {
 }
 
 .hamburger.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg) translate(5px, -7px);
 }
 
 /* Mobile nav */
@@ -574,6 +573,11 @@ ul {
         gap: var(--space-md);
         padding-bottom: var(--space-md);
         -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .catalog-grid::-webkit-scrollbar {
+        display: none;
     }
 
     .catalog-card {
