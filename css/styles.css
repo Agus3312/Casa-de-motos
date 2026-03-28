@@ -50,6 +50,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body.dark-theme {
@@ -58,6 +59,7 @@ body.dark-theme {
     font-family: var(--font-body);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
 }
 
 h1, h2, h3, h4, .font-heading {
@@ -80,6 +82,13 @@ ul {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 var(--space-md);
+    box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 0 16px;
+    }
 }
 
 .text-accent {
@@ -329,6 +338,7 @@ ul {
 
 .hero-text-wrapper {
     max-width: 720px;
+    width: 100%;
 }
 
 .hero-subtitle {
