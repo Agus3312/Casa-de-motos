@@ -919,3 +919,64 @@ button:focus:not(:focus-visible) {
     font-weight: 600;
     color: var(--text-primary);
 }
+
+/* ==========================================================================
+   FULL CATALOG
+   ========================================================================== */
+
+.full-catalog-section {
+    background: var(--bg-main);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.full-catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+}
+
+@media (max-width: 767px) {
+    .full-catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .full-catalog-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.full-catalog-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-lg);
+    background: var(--bg-surface);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-lg);
+    color: var(--text-secondary);
+    text-align: center;
+    transition: border-color var(--transition-smooth), color var(--transition-smooth), transform var(--transition-smooth);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.full-catalog-item:hover {
+    border-color: var(--accent-red);
+    color: var(--text-primary);
+    transform: translateY(-3px);
+}
+
+.full-catalog-item svg {
+    color: var(--accent-red);
+    transition: transform var(--transition-smooth);
+}
+
+.full-catalog-item:hover svg {
+    transform: scale(1.15);
+}
