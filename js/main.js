@@ -74,6 +74,33 @@
     }
 
     // ==========================================================================
+    // ESTADO HORARIO — Abierto / Cerrado
+    // ==========================================================================
+    (function () {
+        const badge = document.getElementById('estado-horario');
+        if (!badge) return;
+
+        // Hora actual en Argentina (UTC-3)
+        const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Argentina/Buenos_Aires' }));
+        const dia = now.getDay(); // 0=Dom, 1=Lun, ..., 6=Sáb
+        const h = now.getHours();
+        const m = now.getMinutes();
+        const minutos = h * 60 + m;
+
+        const abierto1 = minutos >= 9 * 60 + 30 && minutos < 14 * 60 + 30;  // 9:30 - 14:30
+        const abierto2 = minutos >= 16 * 60 + 30 && minutos < 19 * 60 + 30; // 16:30 - 19:30
+        const esDiaHabil = dia >= 1 && dia <= 6; // Lun-Sáb
+
+        if (esDiaHabil && (abierto1 || abierto2)) {
+            badge.textContent = '● Abierto';
+            badge.className = 'abierto';
+        } else {
+            badge.textContent = '● Cerrado';
+            badge.className = 'cerrado';
+        }
+    })();
+
+    // ==========================================================================
     // GSAP — Register ScrollTrigger
     // ==========================================================================
     gsap.registerPlugin(ScrollTrigger);
@@ -213,5 +240,21 @@
         x: 50,
         duration: 0.6,
         ease: 'power3.out',
+    });
+
+    // ==========================================================================
+    // GSAP — Testimonials
+    // ==========================================================================
+    gsap.from('.testimonial-card', {
+        scrollTrigger: {
+            trigger: '.testimonials-grid',
+            start: 'top 80%',
+        },
+        opacity: 0,
+        y: 50,
+        duration: 0.6,
+        stagger: 0.15,
+        ease: 'power3.out',
+        clearProps: 'all',
     });
 })();
