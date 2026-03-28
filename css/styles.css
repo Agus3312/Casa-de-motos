@@ -720,17 +720,10 @@ ul {
     font-size: 0.85rem;
 }
 
-.map-placeholder {
-    background: var(--bg-surface);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+.contact-map iframe {
     border-radius: var(--radius-lg);
-    height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
+    display: block;
+    filter: grayscale(20%) contrast(1.1);
 }
 
 /* ==========================================================================
