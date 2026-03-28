@@ -186,6 +186,7 @@
             duration: 0.6,
             stagger: 0.15,
             ease: 'power3.out',
+            clearProps: 'all',
         });
     }
 
