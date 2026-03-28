@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LB Cortamotos - Venta de repuestos, accesorios y service especializado de motos en Santa Julia 1125.">
+    <meta name="description" content="LV Motos - Repuestos, accesorios y service de motos en Santa Julia 1125.">
     <!-- Título optimizado para SEO Local -->
-    <title>LB Cortamotos | Repuestos y Service de Motos</title>
+    <title>LV Motos | Repuestos y Accesorios de Motos</title>
     
     <!-- Google Fonts: Inter para UI limpia, Syncopate para acentos técnicos/agresivos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
     <header class="main-header" id="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <span class="logo-red">LB</span> CORTAMOTOS
+                <span class="logo-red">LV</span> MOTOS
             </a>
             <nav class="main-nav">
                 <ul class="nav-list">
@@ -35,6 +35,11 @@
             <div class="header-actions">
                 <a href="#contacto" class="btn btn-primary">Agendar Service</a>
             </div>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
         </div>
     </header>
 
@@ -44,13 +49,13 @@
             <div class="hero-background-overlay"></div>
             <div class="container hero-content">
                 <div class="hero-text-wrapper">
-                    <p class="hero-subtitle">MÁXIMO RENDIMIENTO</p>
-                    <h1 class="hero-title">PRECISIÓN.<br><span class="text-accent">POTENCIA.</span><br>ASFALTO.</h1>
+                    <p class="hero-subtitle">REPUESTOS · ACCESORIOS · SERVICE</p>
+                    <h1 class="hero-title">TODO PARA TU MOTO.<br><span class="text-accent">EN UN SOLO LUGAR.</span></h1>
                     <p class="hero-description">
-                        Especialistas en repuestos originales, accesorios premium y cuidado al detalle para tu moto. Estamos en Santa Julia 1125.
+                        Las mejores marcas en repuestos y accesorios para tu moto. Service con turno. Estamos en Santa Julia 1125.
                     </p>
                     <div class="hero-buttons">
-                        <a href="https://wa.me/numerodewhatsapp" class="btn btn-primary btn-large">Consultar por WhatsApp</a>
+                        <a href="https://wa.me/numero?text=Hola,%20quiero%20hacer%20una%20consulta" class="btn btn-primary btn-large">Consultar por WhatsApp</a>
                         <a href="#catalogo" class="btn btn-outline btn-large">Ver Catálogo</a>
                     </div>
                 </div>
@@ -60,14 +65,29 @@
         <!-- MARCAS: Slider continuo o grilla -->
         <section id="marcas" class="brands-section">
             <div class="container container-brands">
-                <p class="brands-label">Tratamos tu moto con lo mejor del mercado</p>
+                <p class="brands-label">Trabajamos con las mejores marcas</p>
+            </div>
+            <div class="brands-track-wrapper">
                 <div class="brands-track">
-                    <!-- Textos placeholder para logos -->
-                    <div class="brand-item">WONDER</div>
-                    <div class="brand-item">CIRCUIT</div>
-                    <div class="brand-item">WITRZ</div>
-                    <div class="brand-item">CASTROL</div>
-                    <div class="brand-item">STANDARD</div>
+                    <span class="brand-item">WIRTZ</span>
+                    <span class="brand-item">CIRCUIT</span>
+                    <span class="brand-item">CASTROL</span>
+                    <span class="brand-item">MOTUL</span>
+                    <span class="brand-item">KAGE</span>
+                    <span class="brand-item">HAWK</span>
+                    <span class="brand-item">PROTAPER</span>
+                    <span class="brand-item">WONDER</span>
+                    <span class="brand-item">STANDARD</span>
+                    <!-- Duplicado para loop infinito -->
+                    <span class="brand-item">WIRTZ</span>
+                    <span class="brand-item">CIRCUIT</span>
+                    <span class="brand-item">CASTROL</span>
+                    <span class="brand-item">MOTUL</span>
+                    <span class="brand-item">KAGE</span>
+                    <span class="brand-item">HAWK</span>
+                    <span class="brand-item">PROTAPER</span>
+                    <span class="brand-item">WONDER</span>
+                    <span class="brand-item">STANDARD</span>
                 </div>
             </div>
         </section>
@@ -76,8 +96,8 @@
         <section id="servicios" class="services-section section-padding">
             <div class="container">
                 <div class="section-heading">
-                    <h2 class="section-title">NUESTROS SERVICIOS</h2>
-                    <p class="section-subtitle">Soluciones integrales de alta gama.</p>
+                    <h2 class="section-title">LO QUE OFRECEMOS</h2>
+                    <p class="section-subtitle">Soluciones integrales para tu moto.</p>
                 </div>
                 
                 <div class="bento-grid">
@@ -113,10 +133,39 @@
                 <div class="section-heading text-center">
                     <h2 class="section-title">DESTACADOS</h2>
                 </div>
-                <!-- Aquí Claude debe armar un display moderno de productos tipo masonry o carrusel 3D -->
-                <div class="catalog-placeholder">
-                    <!-- Espacio reservado para las tarjetas de productos -->
-                    <p class="placeholder-text">[ Área Reservada para UI de Productos: Neumáticos, Lubricantes, Transmisión, Cascos ]</p>
+                <div class="catalog-grid">
+                    <div class="catalog-card">
+                        <div class="catalog-card-img">
+                            <div class="catalog-icon-placeholder">🪖</div>
+                        </div>
+                        <h3 class="catalog-card-title">Cascos</h3>
+                        <p class="catalog-card-desc">Hawk y más. Seguridad con estilo.</p>
+                        <a href="https://wa.me/numero?text=Hola,%20quiero%20consultar%20por%20cascos" class="btn btn-primary">Consultar</a>
+                    </div>
+                    <div class="catalog-card">
+                        <div class="catalog-card-img">
+                            <div class="catalog-icon-placeholder">🛢️</div>
+                        </div>
+                        <h3 class="catalog-card-title">Lubricantes</h3>
+                        <p class="catalog-card-desc">Castrol, Motul. Las mejores marcas.</p>
+                        <a href="https://wa.me/numero?text=Hola,%20quiero%20consultar%20por%20lubricantes" class="btn btn-primary">Consultar</a>
+                    </div>
+                    <div class="catalog-card">
+                        <div class="catalog-card-img">
+                            <div class="catalog-icon-placeholder">🔧</div>
+                        </div>
+                        <h3 class="catalog-card-title">Accesorios</h3>
+                        <p class="catalog-card-desc">Grips, maniguetas, fundas. Wirtz, Circuit.</p>
+                        <a href="https://wa.me/numero?text=Hola,%20quiero%20consultar%20por%20accesorios" class="btn btn-primary">Consultar</a>
+                    </div>
+                    <div class="catalog-card">
+                        <div class="catalog-card-img">
+                            <div class="catalog-icon-placeholder">⚙️</div>
+                        </div>
+                        <h3 class="catalog-card-title">Transmisión</h3>
+                        <p class="catalog-card-desc">Cadenas, coronas, piñones.</p>
+                        <a href="https://wa.me/numero?text=Hola,%20quiero%20consultar%20por%20transmision" class="btn btn-primary">Consultar</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -125,13 +174,14 @@
         <section id="contacto" class="contact-section section-padding">
             <div class="container contact-wrapper">
                 <div class="contact-info">
-                    <h2 class="section-title">ENCUÉNTRANOS</h2>
-                    <p>Visita nuestro local. Te asesoramos como pilotos y mecánicos.</p>
+                    <h2 class="section-title">ENCONTRANOS</h2>
+                    <p>Vení al local, te asesoramos.</p>
                     <ul class="contact-list">
                         <li><strong>Dirección:</strong> Santa Julia 1125</li>
                         <li><strong>Horario:</strong> Lun - Sáb | 9:30 - 14:30 y 16:30 - 19:30</li>
                         <li><strong>Teléfono:</strong> [Insertar Teléfono]</li>
                     </ul>
+                    <a href="https://maps.google.com/?q=Santa+Julia+1125" target="_blank" rel="noopener" class="btn btn-outline btn-directions">Cómo llegar</a>
                 </div>
                 <div class="contact-map">
                     <!-- Iframe de Google Maps Placeholder (Estilo Dark UI) -->
@@ -147,20 +197,25 @@
     <footer class="main-footer">
         <div class="container footer-content">
             <div class="footer-brand">
-                <h3>LB CORTAMOTOS</h3>
-                <p>Pasión por las dos ruedas.</p>
+                <h3>LV MOTOS</h3>
+                <p>Todo para tu moto.</p>
             </div>
             <div class="footer-bottom">
-                &copy; 2026 LB Cortamotos. Todos los derechos reservados.
+                &copy; 2026 LV Motos. Todos los derechos reservados.
             </div>
         </div>
     </footer>
 
     <!-- BOTÓN WHATSAPP FLOTANTE -->
-    <a href="https://wa.me/numero" class="floating-wa" aria-label="Chat en WhatsApp">
-        <div class="wa-icon-placeholder">[ WA ]</div>
+    <a href="https://wa.me/numero?text=Hola,%20quiero%20hacer%20una%20consulta" class="floating-wa" aria-label="Chat en WhatsApp" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="white">
+            <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.129 6.742 3.047 9.379L1.054 31.25l6.1-1.953A15.9 15.9 0 0 0 16.004 32C24.826 32 32 24.826 32 16.004S24.826 0 16.004 0zm9.32 22.608c-.39 1.1-1.932 2.012-3.156 2.278-.84.18-1.937.32-5.63-1.21-4.72-1.956-7.76-6.737-7.998-7.05-.226-.314-1.9-2.532-1.9-4.83s1.2-3.426 1.626-3.896c.39-.43.922-.608 1.227-.608.15 0 .286.008.408.014.428.02.642.042.924.716.354.84 1.216 2.968 1.322 3.182.108.214.214.502.068.802-.134.306-.254.5-.468.77-.214.268-.44.476-.654.77-.194.256-.414.53-.174.96.24.428 1.066 1.756 2.288 2.846 1.57 1.4 2.894 1.836 3.306 2.036.308.15.674.128.922-.136.316-.34.708-.904 1.106-1.462.284-.396.642-.446.982-.3.344.134 2.178 1.028 2.552 1.214.374.188.624.28.716.436.09.156.09.902-.3 2.002z"/>
+        </svg>
     </a>
 
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <!-- Scripts de interactividad (para Claude) -->
     <script src="js/main.js" defer></script>
 </body>
