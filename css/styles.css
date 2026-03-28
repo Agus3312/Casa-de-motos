@@ -512,6 +512,25 @@ ul {
     border-color: var(--accent-red-hover);
 }
 
+.bento-card-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(230, 25, 25, 0.12);
+    border: 1px solid rgba(230, 25, 25, 0.25);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-red);
+    margin-bottom: var(--space-lg);
+}
+
+.bento-card-icon--dark {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 0, 0, 0.3);
+    color: black;
+}
+
 .card-content h3 {
     font-size: 1.3rem;
     margin-bottom: var(--space-sm);
@@ -524,6 +543,31 @@ ul {
 
 .bento-card.bg-accent .card-content p {
     color: rgba(0, 0, 0, 0.7);
+}
+
+.bento-list {
+    list-style: none;
+    margin-top: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.bento-list li {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bento-list li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent-red);
+    flex-shrink: 0;
 }
 
 .mt-4 {
